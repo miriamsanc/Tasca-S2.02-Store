@@ -8,13 +8,13 @@ SELECT nombre, precio FROM producto;
 SELECT * FROM producto;
 
 -- 4. Llista el nom dels productes, el preu en euros (precio_eur) i el preu en dòlars estatunidencs (precio_usd) amb un tipus de canvi de 1 € = 1 $.
-SELECT nombre, precio AS PRECIO_EUR, precio AS PRECIO_USD FROM producto;
+SELECT nombre, precio AS precio_eur, precio AS precio_usd FROM producto;
 
 -- 5. Llista el nom dels productes, el preu en euros i el preu en dòlars estatunidencs (amb un tipus de canvi de 1 € = 1,1 $ i arrodonint el resultat a dues xifres decimals). Utilitza els següents àlies per a les columnes: nom del producte, euros, dòlars.
 SELECT nombre AS 'nom del producte', precio AS euros, ROUND(PRECIO * 1.1, 2) AS dòlars FROM producto;
 
 -- 6. Llista els noms (nombre) i els preus de tots els productes de la taula producto, convertint els noms a majúscula.
-SELECT UPPER(NOMBRE) AS NOMBRE, PRECIO FROM producto;
+SELECT UPPER(NOMBRE) AS nombre, precio FROM producto;
 
 -- 7. Llista els noms (nombre) i els preus (precio) dels productes de la taula producto, convertint els noms a minúscula.
 SELECT LOWER(nombre) AS nombre, precio FROM producto;
@@ -23,7 +23,7 @@ SELECT LOWER(nombre) AS nombre, precio FROM producto;
 SELECT UPPER(LEFT(nombre, 2)) as iniciales FROM fabricante;
 
 -- 9. Llista els noms i els preus dels productes, arrodonint el valor del preu (precio)
-SELECT nombre , ROUND(PRECIO, 0) AS PRECIO FROM producto;
+SELECT nombre , ROUND(PRECIO, 0) AS precio FROM producto;
 
 -- 10. Llista els noms i els preus de tots els productes (precio truncado) de la taula producto, truncant el valor del preu per a mostrar-lo sense cap xifra decimal.
 SELECT nombre , TRUNCATE(PRECIO, 0) AS precio truncado FROM producto;
@@ -35,13 +35,13 @@ SELECT codigo_fabricante FROM producto;
 SELECT DISTINCT codigo_fabricante FROM producto;
 
 -- 13. Llista els noms dels fabricants ordenats de manera ascendent
-SELECT NOMBRE FROM fabricante ORDER BY NOMBRE ASC;
+SELECT nombre FROM fabricante ORDER BY NOMBRE ASC;
 
 -- 14. Llista els noms dels fabricants ordenats de manera descendent
-SELECT NOMBRE FROM fabricante ORDER BY NOMBRE DESC;
+SELECT nombre FROM fabricante ORDER BY NOMBRE DESC;
 
 -- 15. Llista els noms i els preus dels productes ordenats, en primer lloc, pel nom de manera ascendent i, en segon lloc, pel preu de manera descendent.
-SELECT NOMBRE, PRECIO FROM producto ORDER BY NOMBRE ASC, PRECIO DESC;
+SELECT nombre, precio FROM producto ORDER BY NOMBRE ASC, PRECIO DESC;
 
 -- 16. Retorna una llista amb les 5 primeres files de la taula fabricante.
 SELECT * FROM fabricante LIMIT 5;
