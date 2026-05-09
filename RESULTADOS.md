@@ -2,11 +2,14 @@
 
 
 ## 📈 Resumen
-✅ 0 correctas de 18 queries
+✅ 1 correctas de 18 queries
 
-## ❌ Query 1: Error
-- **Descripción**: 1146 (42S02): Table 'tienda.PRODUCTO' doesn't exist
+## ✅ Query 1: Correcto
 
+⏱ Tiempo: 0.33 ms
+🔍 No se usó ningún índice en esta consulta.
+
+---
 
 ## ❌ Query 2: Error
 - **Descripción**: 1146 (42S02): Table 'tienda.PRODUCTO' doesn't exist
