@@ -20,13 +20,13 @@ SELECT UPPER(NOMBRE) AS nombre, precio FROM producto;
 SELECT LOWER(nombre) AS nombre, precio FROM producto;
 
 -- 8. Llista el nom de tots els fabricants en una columna, i en una altra columna obtingui en majúscules els dos primers caràcters del nom del fabricant (iniciales).
-SELECT UPPER(LEFT(nombre, 2)) as iniciales FROM fabricante;
+SELECT nombre, UPPER(LEFT(nombre, 2)) as iniciales FROM fabricante;
 
 -- 9. Llista els noms i els preus dels productes, arrodonint el valor del preu (precio)
 SELECT nombre , ROUND(PRECIO, 0) AS precio FROM producto;
 
 -- 10. Llista els noms i els preus de tots els productes (precio truncado) de la taula producto, truncant el valor del preu per a mostrar-lo sense cap xifra decimal.
-SELECT nombre , TRUNCATE(PRECIO, 0) AS precio truncado FROM producto;
+SELECT nombre , TRUNCATE(PRECIO, 0) AS 'precio truncado' FROM producto;
 
 -- 11. Mostra una llista amb els codis dels fabricants que apareixen a la taula producto, incloent possibles repeticions.
 SELECT codigo_fabricante FROM producto;
